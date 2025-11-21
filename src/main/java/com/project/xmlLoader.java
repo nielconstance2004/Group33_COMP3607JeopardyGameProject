@@ -10,15 +10,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
 public class xmlLoader implements Loader{
- private String name;
-
-
-    public xmlLoader(String name){
-        this.name=name;
-    }
-
-
-    public String getName(){return this.name;}
     
     public void load(){
 
@@ -27,7 +18,7 @@ public class xmlLoader implements Loader{
          try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse("sample_game_XML.xml");
+            Document document = builder.parse("/workspaces/COMP3607JeopardyGameProject/src/main/java/com/project/sample_game_XML.xml");
             NodeList nodeList = document.getElementsByTagName("QuestionItem");
 
             for (int i = 0; i < nodeList.getLength(); i++) {

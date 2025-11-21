@@ -8,15 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 public class jsonLoader implements Loader {
-     private String name;
-
-
-    public jsonLoader(String name){
-        this.name=name;
-    }
-
-    public String getName(){return this.name;}
-
+     
     @Override
     public void load() {
     ObjectMapper objectMapper = new ObjectMapper();

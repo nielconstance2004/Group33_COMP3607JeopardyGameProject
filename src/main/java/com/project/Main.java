@@ -7,8 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-           Loader csvf = new jsonLoader("taco");
-           csvf.load();
+        LoaderFactory jsonfactory = new jsonFactory();
+        client jsonClient = new client(jsonfactory);
+        jsonClient.executeLoad();
 
     }
 }
