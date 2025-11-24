@@ -1,5 +1,3 @@
-Main.java:
-
 package com.jeopardy;
 
 import com.jeopardy.engine.EventLogger;
@@ -57,5 +55,5 @@ public class Main {
         System.out.println("Log written to: " + logFile.getAbsolutePath());
 
         if (logger != null) logger.log(engine.getCaseId(), "SYSTEM", "EXIT_GAME", "", null, "User exit", "OK", engine.getPlayers().stream().mapToInt(p->p.getScore()).sum());
-    }```
+    }
 }
