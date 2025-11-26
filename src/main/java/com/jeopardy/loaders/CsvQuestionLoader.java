@@ -32,13 +32,13 @@ public class CsvQuestionLoader implements QuestionLoader { // implement Question
                 String category = parts[0].trim().replaceAll("\"", ""); // get category
                 int value = 0; // initialize value
                 try { value = Integer.parseInt(parts[1].trim()); } catch (Exception ex) { value = 0; } // parse value
-                String questionText = parts[2].trim().replaceAll("\"", ""); // get question text
-                String answer = parts[3].trim().replaceAll("\"", ""); // get answer
+                 String questionText = parts[2].trim().replaceAll("\"", ""); // get question text
                 // optional choices in CSV: choiceA,choiceB,choiceC,choiceD (columns 4..7)
-                String a = parts.length > 4 ? parts[4].trim().replaceAll("\"", "") : null; // get choice A
-                String b = parts.length > 5 ? parts[5].trim().replaceAll("\"", "") : null; // get choice B
-                String c = parts.length > 6 ? parts[6].trim().replaceAll("\"", "") : null; // get choice C
-                String d = parts.length > 7 ? parts[7].trim().replaceAll("\"", "") : null; // get choice D
+                String a = parts.length > 3 ? parts[3].trim().replaceAll("\"", "") : null; // get choice A
+                String b = parts.length > 4 ? parts[4].trim().replaceAll("\"", "") : null; // get choice B
+                String c = parts.length > 5 ? parts[5].trim().replaceAll("\"", "") : null; // get choice C
+                String d = parts.length > 6 ? parts[6].trim().replaceAll("\"", "") : null; // get choice D
+                String answer = parts[7].trim().replaceAll("\"", ""); // get answer
         list.add(new com.jeopardy.model.QuestionBuilder() // build question
             .category(category) // set category
             .value(value) // set value
